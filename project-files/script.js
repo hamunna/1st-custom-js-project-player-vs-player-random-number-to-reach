@@ -23,6 +23,12 @@ const snScore = document.querySelector('#snScore');
 let p1DisplayScore = document.querySelector('#p1DisplayScore');
 let p2DisplayScore = document.querySelector('#p2DisplayScore');
 
+const winnerJoy = document.querySelector('body');
+
+const countDown3 = document.querySelector('#countDown3');
+const countDown2 = document.querySelector('#countDown2');
+const countDown1 = document.querySelector('#countDown1');
+
 // Environment Setup
 //=================
 
@@ -35,11 +41,18 @@ let gameOver = false;
 //=================================
 
 generateNumber.addEventListener('click', () => {
-	winningScore = Math.floor(Math.random() * 10) + 1;
-	// console.log(random);
-	snQuestion.textContent = '';
-	snScore.textContent = '';
-	snSpin.classList.remove('d-none');
+	if (p1Score > 0 || p2Score > 0) {
+		alert("Please Reset the Game First!");
+	} else {
+		winningScore = Math.floor(Math.random() * 10) + 1;
+		snQuestion.textContent = '';
+		snScore.textContent = '';
+		snSpin.classList.remove('d-none');
+		countDown3.classList.remove('d-none');
+		countDown2.classList.remove('d-none');
+		countDown1.classList.remove('d-none');
+
+	}
 });
 
 
@@ -51,9 +64,12 @@ function winner(oldScore, winningScore) {
 		if (p1Score === winningScore) {
 			p1BtnName.classList.add('bg-success');
 			p2BtnName.classList.add('bg-danger');
+			winnerJoy.classList.add('winner-joy')
+				;
 		} else {
 			p1BtnName.classList.add('bg-danger');
 			p2BtnName.classList.add('bg-success');
+			winnerJoy.classList.add('winner-joy');
 		}
 
 		gameOver = true;
@@ -74,19 +90,23 @@ function winner(oldScore, winningScore) {
 //======================================================
 
 p1BtnName.addEventListener('click', () => {
-	if (!gameOver) {
+	if (!gameOver && winningScore > 0) {
 		p1Score++;
 		p1DisplayScore.textContent = p1Score;
 		winner(p1Score, winningScore);
+	} else {
+		alert('Generate Random Number First!');
 	}
 
 });
 
 p2BtnName.addEventListener('click', () => {
-	if (!gameOver) {
+	if (!gameOver && winningScore > 0) {
 		p2Score++;
 		p2DisplayScore.textContent = p2Score;
 		winner(p2Score, winningScore);
+	} else {
+		alert('Generate Random Number First!');
 	}
 
 });
@@ -99,27 +119,27 @@ function reset() {
 	p1Score = 0;
 	p1DisplayScore.textContent = p1Score;
 	p1BtnName.removeAttribute('disabled');
-	// p1BtnName.classList.remove('bg-success bg-danger');
 	p1BtnName.classList.add('my-secondary-bg');
 
 	p1BtnName.classList.remove('bg-success');
 	p1BtnName.classList.remove('bg-danger');
-	
+
 	p2Score = 0;
 	p2DisplayScore.textContent = p2Score;
 	p2BtnName.removeAttribute('disabled');
 	// p2BtnName.
 	p2BtnName.classList.remove('bg-success');
 	p2BtnName.classList.remove('bg-danger');
-	
+
 	winningScore = 0;
 	gameOver = false;
-	
+
 	snQuestion.classList.remove('d-none');
 	snQuestion.textContent = '?';
 	snSpin.classList.add('d-none');
 	snScore.textContent = '';
-	secrateNumText.textContent = "The Secrate Number is..."
+	secrateNumText.textContent = "The Secrate Number is...";
+	winnerJoy.classList.remove('winner-joy');
 
 	return reset();
 }
@@ -131,13 +151,6 @@ resetGame.addEventListener('click', () => {
 	reset();
 });
 
-
-// Working with Edit Buttons.
-//=======================
-
-p1BtnEdit.addEventListener('click', () => {
-	
-})
 
 
 

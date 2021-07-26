@@ -3,6 +3,10 @@
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+.winner-joy {
+	background-image: url('winner.gif');
+}
+
 .my-primary-text {
 	color: #2d25a0;
 	font-weight: 900;
@@ -45,6 +49,52 @@
 	margin-top: -25%;
 }
 
+.counters {
+	position: absolute;
+	top: 35%;
+	left:40%;
+	font-size: 1rem;
+	font-weight: 900;
+}
+
+#countDown3 {
+	opacity: 0;
+	animation-name: counter;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-delay:  0;
+}
+
+#countDown2 {
+	opacity: 0;
+	animation-name: counter;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+}
+
+#countDown1 {
+	opacity: 0;
+	animation-name: counter;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+}
+
+@keyframes counter{
+
+	0%{
+		font-size: 1rem;
+		opacity: 1;
+		color: #2d25a0;
+	}
+	100%{
+		font-size: 20rem;
+		opacity: 0;
+		color: #e02c6d
+	}
+}
+
 
 
 @media only screen and (max-width: 991px){
@@ -53,7 +103,7 @@
 		height: 200px;
 		width: 200px;
 		position: absolute;
-		right: 3%;
+		right: 0;
 		top: 55%;
 		display: inline-block;
 	}
