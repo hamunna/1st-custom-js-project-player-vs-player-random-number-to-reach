@@ -48,7 +48,7 @@ generateNumber.addEventListener('click', () => {
 	} else {
 		winningScore = Math.floor(Math.random() * 10) + 1;
 
-		secrateNumText.textContent = 'A Secrate Number Generated Between 1 and 10';
+		secrateNumText.textContent = 'A Secrate Number is Generated Between 1 and 10';
 		secrateNumText.classList.add('text-bold');
 
 		snQuestion.textContent = '';
