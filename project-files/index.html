@@ -20,6 +20,7 @@
 		<div class="container">
 			<h1 class="my-primary-text text-center my-5">Let's Reach The Hidden Number</h1>
 
+			<!-- Score Display Area -->
 			<div class="score-area row my-primary-bg d-flex justify-content-around align-items-center">
 				<div class="h2 text-white text-bold col-lg-6 col-md-6 col-sm-10 text-center">
 					<span id="p1DisplayName">Player-1 Score : </span>
@@ -32,53 +33,44 @@
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="row col-lg-5 col-md-10">
-					<button id="p1BtnName" class="btn my-secondary-bg col-8 my-3 text-white">
+			<div class="my-p-relative">
+
+				<!-- Player Button Area -->
+				<div class="row d-flex justify-content-between my-3">
+
+					<button id="p1BtnName" class="col-lg-4 col-md-10 btn my-secondary-bg text-white">
 						<span class="h4">Player-1 Button</span>
 					</button>
-					
-					<button class="btn my-primary-bg col-3 text-white my-3 ml-1">
-						<span id="p1BtnEdit" class="h4">Edit</span>
-					</button>
-				</div>
 
-				<div class="row col-lg-5 col-md-10">
-
-					<button id="p2BtnName" class="btn my-secondary-bg col-8 my-3 text-white">
+					<button id="p2BtnName" class="col-lg-4 col-md-10 btn my-secondary-bg text-white">
 						<span class="h4">Player-2 Button</span>
 					</button>
 
-					<button class="btn my-primary-bg col-3 text-white my-3 ml-1">
-						<span id="p2BtnEdit" class="h4">Edit</span>
-					</button>
+					<div class="col-3"></div>
 
+				</div>
+
+
+				<div class="row my-5">
+
+					<!-- Random Number Generating Butto -->
+					<div class="col-lg-8 col-md-6 col-sm-10">
+						<button id="generateNumber" class="btn my-primary-bg text-white">
+							<span class="h4">Generate a Secrate Random Number</span>
+						</button>
+					</div>
+
+					<!-- Reset Button -->
+					<div class="col-lg-4 col-md-6 col-sm-10">
+						<button id="resetGame" class="d-block btn my-secondary-bg text-white">
+							<span class="h4">Reset Game</span>
+						</button>
+					</div>
 				</div>
 
 			</div>
 
-			<div class="row">
-				<div class="row col-12">
-					<button id="generateNumber" class="btn my-primary-bg col-8 my-3 text-white">
-						<span class="h4">Generate a Secrate Random Number</span>
-					</button>
-				</div>
-			</div>
-
-			<div class="row d-flex justify-content-between my-3">
-
-				<button id="resetGame" class="col-4 btn my-secondary-bg text-white">
-					<span class="h5 text-bold">Reset Game</span>
-				</button>
-
-				<button id="resetPlayers" class="col-4 btn my-secondary-bg text-white">
-					<span class="h5 text-bold">Reset Players</span>
-				</button>
-
-				<div class="col-3"></div>
-
-			</div>
-
+			<!-- Secrate Number Display Area -->
 			<div id="secrate-num" class="my-secondary-bg text-white rounded p-2">
 				<small id="secrateNumText">The Secrate Number is...</small>
 				<div id="sNumberReveal">

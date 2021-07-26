@@ -30,7 +30,7 @@
 	width: 200px;
 	position: absolute;
 	right: 3%;
-	top: 50%;
+	top: 60%;
 	display: inline-block;
 }
 
@@ -43,4 +43,23 @@
 
 #snScore {
 	margin-top: -25%;
+}
+
+.my-p-relative {
+	position: relative;
+	width: 100%;
+	left: 0;
+	border: 2px solid red;
+}
+
+#resetGame {
+	position:absolute;
+	left:0;
+	width: 300px;
+}
+
+#generateNumber {
+	position:absolute;
+	right: 28.5%;
+	width: 475px;
 }
