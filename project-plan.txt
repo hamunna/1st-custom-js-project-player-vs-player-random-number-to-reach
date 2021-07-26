@@ -1,0 +1,55 @@
+===================================================
+1st-project-player-vs-player-random-number-to-reach ==
+===================================================
+
+*** What to do ***
+------------------------
+
+1) There will be two player Button to click.
+2)  In every click, 1 point will be added to the player score.
+
+3) There will be 1 Button to reset everything without Players Name and 1 Button to Reset everything with Players Name.
+5) There will also be a Random number genrating Button.
+6) Random Number will be Hidden.
+7)  When a player reach that number,  He/She will be considered as a winner.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+*** What to Have ***
+-----------------------------
+
+1) BUTTONS :: There will be 2 Player Clickable Button, 1 Reset Button and 1 Random number generating Button
+2) DISPLAYING :: There will be 2 Player Display Number, And the number will be incremented in Every Individual Click
+
+3) There will be an inline-edit Button to Rename the player
+4) Display Name, Button Name will be changed together into the given name.
+5) When One of the players will reach the Secret Number, A Pop-up will appear to Say the player name and Declare Him/Her as a Winner
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+*** How to Execute ***
+-----------------------------
+
+1) Design a Layout to work with the Above Plans.
+
+2) Give an ID Name to every Important HTML Element.
+
+3) Wrap every usable ID, Class and Tag to seperate Variable in JavaScript
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+*** Algorithm ***
+----------------------------------------
+
+1) Reset BUTTON ::
+	a) Reset Button will clear everything to initial state.
+	b) Reset  Button will Generate a Random Number.
+	c) [Reset Players] Button will Reset everything and also the players
+
+2) Player-1 Button && Player-2 Button ::
+	a) 
+
+
+
+
+

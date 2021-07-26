@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Player VS Player Random Number to Reach</title>
+
+		<!-- Bootstrap CDN CSS File -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+		<!-- Main CSS File -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+
+		<div class="container">
+			<h1 class="my-primary-text text-center my-5">Let's Reach The Hidden Number</h1>
+
+			<div class="score-area row my-primary-bg d-flex justify-content-around align-items-center">
+				<div class="h2 text-white text-bold col-lg-6 col-md-6 col-sm-10 text-center">
+					<span id="p1DisplayName">Player-1 Score : </span>
+					<span id="p1DisplayScore">0</span>
+				</div>
+
+				<div class="h2 text-white text-bold col-lg-6 col-md-6 col-sm-10 text-center">
+					<span id="p2DisplayName">Player-2 Score : </span>
+					<span id="p2DisplayScore">0</span>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="row col-lg-5 col-md-10">
+					<button id="p1BtnName" class="btn my-secondary-bg col-8 my-3 text-white">
+						<span class="h4">Player-1 Button</span>
+					</button>
+					
+					<button class="btn my-primary-bg col-3 text-white my-3 ml-1">
+						<span id="p1BtnEdit" class="h4">Edit</span>
+					</button>
+				</div>
+
+				<div class="row col-lg-5 col-md-10">
+
+					<button id="p2BtnName" class="btn my-secondary-bg col-8 my-3 text-white">
+						<span class="h4">Player-2 Button</span>
+					</button>
+
+					<button class="btn my-primary-bg col-3 text-white my-3 ml-1">
+						<span id="p2BtnEdit" class="h4">Edit</span>
+					</button>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="row col-12">
+					<button id="generateNumber" class="btn my-primary-bg col-8 my-3 text-white">
+						<span class="h4">Generate a Secrate Random Number</span>
+					</button>
+				</div>
+			</div>
+
+			<div class="row d-flex justify-content-between my-3">
+
+				<button id="resetGame" class="col-4 btn my-secondary-bg text-white">
+					<span class="h5 text-bold">Reset Game</span>
+				</button>
+
+				<button id="resetPlayers" class="col-4 btn my-secondary-bg text-white">
+					<span class="h5 text-bold">Reset Players</span>
+				</button>
+
+				<div class="col-3"></div>
+
+			</div>
+
+			<div id="secrate-num" class="my-secondary-bg text-white rounded p-2">
+				<small id="secrateNumText">The Secrate Number is...</small>
+				<div id="sNumberReveal">
+
+					<div id="snQuestion">?</div>
+
+					<div class="d-flex justify-content-center mt-5">
+						<div id="snSpin" class="spinner-border d-none" role="status">
+							<span class="visually-hidden">Loading...</span>
+						</div>
+					</div>
+
+					<div id="snScore"></div>
+
+				</div>
+			</div>
+
+		</div>
+
+
+
+		<!-- Bootstrap CDN JS File -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"></script>
+
+		<!-- Main JS File -->
+		<script src="script.js"></script>
+	</body>
+
+</html>
