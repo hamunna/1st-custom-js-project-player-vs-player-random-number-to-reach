@@ -29,6 +29,8 @@ const countDown3 = document.querySelector('#countDown3');
 const countDown2 = document.querySelector('#countDown2');
 const countDown1 = document.querySelector('#countDown1');
 
+const secrateNum = document.querySelector('#secrate-num');
+
 // Environment Setup
 //=================
 
@@ -45,6 +47,10 @@ generateNumber.addEventListener('click', () => {
 		alert("Please Reset the Game First!");
 	} else {
 		winningScore = Math.floor(Math.random() * 10) + 1;
+
+		secrateNumText.textContent = 'A Secrate Number Generated Between 1 and 10';
+		secrateNumText.classList.add('text-bold');
+
 		snQuestion.textContent = '';
 		snScore.textContent = '';
 		snSpin.classList.remove('d-none');
@@ -52,6 +58,9 @@ generateNumber.addEventListener('click', () => {
 		countDown2.classList.remove('d-none');
 		countDown1.classList.remove('d-none');
 
+		secrateNum.classList.add('my-secondary-bg');
+
+		
 	}
 });
 
@@ -140,6 +149,12 @@ function reset() {
 	snScore.textContent = '';
 	secrateNumText.textContent = "The Secrate Number is...";
 	winnerJoy.classList.remove('winner-joy');
+
+	countDown3.classList.add('d-none');
+	countDown2.classList.add('d-none');
+	countDown1.classList.add('d-none');
+
+	secrateNum.classList.remove('my-secondary-bg');
 
 	return reset();
 }
