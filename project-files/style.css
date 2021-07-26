@@ -45,21 +45,31 @@
 	margin-top: -25%;
 }
 
-.my-p-relative {
-	position: relative;
-	width: 100%;
-	left: 0;
-	border: 2px solid red;
+
+
+@media only screen and (max-width: 991px){
+
+	#secrate-num {
+		height: 200px;
+		width: 200px;
+		position: absolute;
+		right: 3%;
+		top: 55%;
+		display: inline-block;
+	}
 }
 
-#resetGame {
-	position:absolute;
-	left:0;
-	width: 300px;
-}
+@media only screen and (max-width: 767px){
 
-#generateNumber {
-	position:absolute;
-	right: 28.5%;
-	width: 475px;
+	body {
+		height: 725px;
+	}
+	#secrate-num {
+		height: 200px;
+		width: 200px;
+		position: absolute;
+		top: 102%;
+		display: block;
+		left: 22%;
+	}
 }
